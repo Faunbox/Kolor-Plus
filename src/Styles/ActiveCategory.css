@@ -1,0 +1,39 @@
+div.acWrapper {
+  display: flex;
+  width: auto;
+  height: auto;
+  margin: 0 auto 10px auto;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h1#ac {
+  align-self: start;
+  position: relative;
+  margin: 20px 0;
+  margin-left: var(--margin);
+  font-size: 50px;
+  color: black;
+  font-weight: bold;
+}
+
+h1#ac::before {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  border-bottom: 5px black solid;
+  width: 120%;
+}
+
+@media (max-width: 990px) {
+  h1#ac {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 740px) {
+  h1#ac {
+    font-size: 30px;
+  }
+}

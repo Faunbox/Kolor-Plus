@@ -1,0 +1,86 @@
+:root {
+  --margin: 12%;
+  --margin-790: 8%;
+  --bgc: white;
+  --font-color: black;
+  --footer-backgroundcolor: #dfdfdf;
+  --footer-bgc: rgb(247, 247, 247);
+  --footer-p-color: black;
+  --fz: 50px;
+  --article-fz: 25px;
+  --fz-1600: 23px;
+  --fz-1280: 21px;
+  --fz-1024: 20px;
+  --fz-790: 17px;
+  --fz-nav: 24px;
+  --ham-nav-bgc: #3b3b3b;
+  --ham-nav-active: #4b4b4b;
+  --ham-nav-color: #dfdfdf;
+  --ham-nav-border: 1px solid #5b5b5b;
+  --ham-nav-border-radius: 8px;
+}
+
+#root {
+  max-width: 2400px;
+  margin: 0 auto;
+}
+
+body {
+  /* background-image: url(../src/images/61511_f-16232-lakierowanie-auta-krok-po-kroku.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; */
+  overflow-x: hidden;
+  background-color: var(--bgc);
+}
+
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2% 0 2%;
+}
+
+.loading {
+  font-size: 40px;
+  margin: 20px auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+a.cookie {
+  font-weight: bold;
+  color: blue;
+  text-transform: capitalize;
+}
+
+div,
+p,
+h1,
+h2 {
+  color: var(--font-color);
+}
+
+@media (max-width: 1340px) {
+  .wrapper {
+    max-width: 900px;
+  }
+}
+@media (max-width: 990px) {
+  .wrapper {
+    max-width: 700px;
+  }
+  .loading {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 740px) {
+  .wrapper {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .loading {
+    font-size: 30px;
+  }
+}

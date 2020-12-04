@@ -1,0 +1,143 @@
+.mainSection {
+  display: flex;
+  margin: 55px auto;
+  flex-wrap: wrap;
+  font-size: var(--article-fz);
+}
+
+section.textMain,
+article.news {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+section.textMain {
+  flex-direction: row;
+}
+
+div.mainColumn {
+  flex-direction: column;
+}
+
+p.mainColumn {
+  text-align: center;
+  flex-basis: 100%;
+  margin: 20px auto 0 auto;
+}
+
+div.main {
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 0 0 25px;
+}
+
+ul.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  flex-shrink: 0;
+  margin: 10px auto 0 auto;
+}
+
+li.main {
+  flex-basis: 50%;
+  padding: 0 10px 0 10px;
+}
+
+p.textMain {
+  text-align: center;
+}
+
+.main-image {
+  max-width: 360px;
+  max-height: 360px;
+  flex-basis: 30%;
+  border-radius: 10px;
+  filter: contrast(130%);
+}
+
+article.textMain {
+  margin-top: 20px;
+  flex-basis: 80%;
+  margin: 20px auto 0 auto;
+  text-align: center;
+}
+
+div.line {
+  margin: 30px 0 0 0;
+  width: 100vw;
+  height: 3px;
+  background-color: black;
+}
+
+h1.news {
+  margin: 30px 0 30px 0;
+  align-self: flex-start;
+}
+
+ul.mainSection {
+  list-style: none;
+}
+
+@media (max-width: 1340px) {
+  .mainSection {
+    font-size: var(--fz-1280);
+  }
+  .main-image {
+    margin: 0 20px 0 0;
+  }
+  li.main {
+    flex-basis: 50%;
+  }
+  p.textMain {
+    margin: 0 0 0 0;
+  }
+}
+
+@media (max-width: 990px) {
+  .main-image {
+    /* display: none; */
+    margin: 20px 0 0 0;
+  }
+
+  section.textMain {
+    flex-direction: column-reverse;
+  }
+
+  article.news {
+    flex-direction: column;
+  }
+  img.news {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20px auto;
+  }
+
+  p.textMain {
+    flex-basis: 100%;
+  }
+  h1.news {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 740px) {
+  h1.news {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 530px) {
+  p.textMain {
+    margin: 0 2%;
+  }
+  li.main {
+    flex-basis: 100%;
+  }
+}
