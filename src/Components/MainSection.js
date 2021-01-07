@@ -30,7 +30,10 @@ const MainSection = () => {
   useEffect(() => {
     const fetchText = async () => {
       const db = firebase.firestore();
-      const docRef = await db.collection("fl_content").get();
+      const docRef = await db
+        .collection("fl_content")
+        .where("aktywne", "==", true)
+        .get();
       setText(docRef.docs[docRef.docs.length - 1].data().newsText);
     };
     fetchText();

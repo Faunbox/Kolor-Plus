@@ -12,9 +12,6 @@ article.news {
   align-items: center;
   justify-content: space-around;
 }
-/* article.news {
-  flex-wrap: wrap;
-} */
 
 section.textMain {
   flex-direction: row;
@@ -64,10 +61,6 @@ p.textMain {
   filter: contrast(130%);
 }
 
-div.news {
-  display: flex;
-}
-
 article.textMain {
   margin-top: 20px;
   flex-basis: 80%;
@@ -83,11 +76,10 @@ div.line {
 }
 
 p.news-date {
-  display: flex;
   font-size: 0.7rem;
   padding: 10px;
   color: black;
-  align-self: flex-end;
+  text-align: right;
 }
 
 h1.news {
