@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../Styles/MainSection.css";
-import firebase from "firebase/app";
-import "firebase/firestore";
 import "../App.css";
 import { motion } from "framer-motion";
 import frontImg from "../images/front.webp";
@@ -24,20 +22,26 @@ const pageTransition = {
   duration: 1.3,
 };
 
-const MainSection = () => {
-  const [text, setText] = useState("");
+const products = [
+  "– lakiery",
+  "– szpachlówki",
+  "– podkłady",
+  "– środki do konserwacji",
+  "– taśmy klejące",
+  "– kleje",
+  "– masy uszczelniające",
+  "– materiały ścierne",
+  "– materiały do polerowania",
+  "– lakiery SPRAY",
+  "– rozcieńczalniki i zmywacze",
+  "– kombinezony i rękawiczki",
+  "– zaprawki z pędzelkiem",
+  "– odrdzewiacze",
+  "– pistolety lakiernicze i do konserwacji",
+  "– polerki i szlifierki",
+];
 
-  useEffect(() => {
-    const fetchText = async () => {
-      const db = firebase.firestore();
-      const docRef = await db
-        .collection("fl_content")
-        .where("aktywne", "==", true)
-        .get();
-      setText(docRef.docs[docRef.docs.length - 1].data().newsText);
-    };
-    fetchText();
-  });
+const MainSection = () => {
   return (
     <>
       <motion.div
@@ -57,24 +61,11 @@ const MainSection = () => {
                 </strong>
               </p>
               <ul className="main">
-                <li className="main">– lakiery</li>
-                <li className="main">– szpachlówki</li>
-                <li className="main">– podkłady</li>
-                <li className="main">– środki do konserwacji</li>
-                <li className="main">– taśmy klejące</li>
-                <li className="main">– kleje</li>
-                <li className="main">– masy uszczelniające</li>
-                <li className="main">– materiały ścierne</li>
-                <li className="main">– materiały do polerowania</li>
-                <li className="main">– lakiery SPRAY</li>
-                <li className="main">– rozcieńczalniki i zmywacze</li>
-                <li className="main">– kombinezony i rękawiczki</li>
-                <li className="main">– zaprawki z pędzelkiem</li>
-                <li className="main">– odrdzewiacze</li>
-                <li className="main">
-                  – pistolety lakiernicze i do konserwacji
-                </li>
-                <li className="main">– polerki i szlifierki</li>
+                {products.map((product, i) => (
+                  <li className="main" key={i}>
+                    {product}
+                  </li>
+                ))}
               </ul>
             </div>
           </section>
@@ -86,22 +77,7 @@ const MainSection = () => {
           </p>
         </div>
         <div className="line"></div>
-        <News text={text} />
-        {/* <h1 className="news">Aktualności</h1>
-        <article className="news">
-          <img className="news main-image" alt="novol" src={newsImg} />
-          <p className="news textMain">
-            <strong>NOVOL</strong> nie próżnuje i wystartował z programem
-            lojalnościowym{" "}
-            <a href="https://nfamily.novol.com/." target="blank">
-              N-family
-            </a>
-            . Dzięki udziałowi w programie zbierasz punkty za zamówienie
-            wybranych produktów NOVOL i odbierasz atrakcyjne nagrody. Dodatkowo
-            jako pierwszy dowiesz się o nowych produktach i ich innowacyjnych
-            właściwościach.
-          </p>
-        </article> */}
+        <News />
       </motion.div>
     </>
   );

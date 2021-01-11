@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
-const News = (props) => {
+const News = () => {
   const [data, setData] = useState({});
   const [date, setDate] = useState("");
 
@@ -14,10 +14,9 @@ const News = (props) => {
         .where("aktywne", "==", true)
         .get();
 
-      setData(docRef.docs[docRef.docs.length - 1].data());
-      setDate(
-        docRef.docs[docRef.docs.length - 1].data().dataDodania.slice(0, 10)
-      );
+      const data = docRef.docs[docRef.docs.length - 1].data();
+      setData(data);
+      setDate(data.dataDodania.slice(0, 10));
     };
     fetchData();
   }, []);
@@ -35,7 +34,7 @@ const News = (props) => {
           />
           <p
             className="news textMain"
-            dangerouslySetInnerHTML={{ __html: props.text }}></p>
+            dangerouslySetInnerHTML={{ __html: data.testtext }}></p>
         </article>
       </div>
     </>
