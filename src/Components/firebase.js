@@ -25,6 +25,10 @@ firebase.firestore();
 firebase.storage();
 firebase.auth();
 
+export const authAnony = () => {
+  return firebase.auth().signInAnonymously();
+};
+
 export const app = flamelink({
   firebaseApp, // required
   dbType: "cf", // can be either 'rtdb' or 'cf' for Realtime DB or Cloud Firestore
