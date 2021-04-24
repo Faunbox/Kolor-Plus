@@ -6,24 +6,19 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HamburgerDrop from "./HamburgerDrop";
 
-
-
 const Hamburger = () => {
-
-
   const [open, setOpen] = useState(false); //default False
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false);
 
   const toggleClass = () => {
     setOpen(!open);
     if (open) {
-      setActive(true)
+      setActive(true);
     } else {
-      setActive(false)
+      setActive(false);
     }
-  }
+  };
 
-  
   return (
     <>
       <li className="menu hamburger nav burger">
@@ -32,10 +27,9 @@ const Hamburger = () => {
             <FontAwesomeIcon icon={arrow} />
           ) : (
             <FontAwesomeIcon icon={menu} />
-          )}   
-          {open ? <HamburgerDrop open={active} /> : null}       
+          )}
+          {open ? <HamburgerDrop open={active} /> : null}
         </button>
-        
       </li>
     </>
   );

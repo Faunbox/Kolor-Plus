@@ -50,12 +50,13 @@ const MainSection = () => {
         animate="in"
         exit="out"
         variants={pageVariants}
-        transition={pageTransition}>
-        <div className="mainColumn">
+        transition={pageTransition}
+      >
+        <div id="news" className="mainColumn">
           <section className="textMain">
             <img className="main-image" src={frontImg} alt="Kolor-Plus sklep" />
             <div className="main">
-              <p className="textMain main">
+              <p className="textMain news">
                 <strong>
                   W naszym sklepie możecie państwo kupić między innymi:
                 </strong>

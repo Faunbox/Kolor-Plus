@@ -13,7 +13,6 @@ import Footer from "./Components/Footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import CookieConsent from "react-cookie-consent";
-import { GlobalStyles } from "./Global/GlobalStyles";
 import { pageTransition, pageVariants } from "./Global/GlobalVariables";
 
 const GalleryComponent = lazy(() => import("./Components/Gallery"));
@@ -34,7 +33,6 @@ function App() {
   return (
     <BrowserRouter>
       <>
-        <GlobalStyles />
         <CookieConsent
           location="bottom"
           cookieName="ciasteczka"

@@ -1,73 +1,34 @@
 import React from "react";
 import MenuButton from "./MenuButton";
 import "../App.css";
-import Hamburger from "./Hamburger";
-import styled, { css } from "styled-components";
 import logo from "../images/logo.png";
+import Hamburger from "./Hamburger";
 import { MenuButtonNames } from "../Global/GlobalVariables";
-
-const Navigation = styled.nav`
-  width: 100%;
-`;
-
-const Ul = styled.ul`
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-`;
-
-const LiCss = css`
-  display: flex;
-  flex-grow: 1;
-  flex-basis: 10%;
-  justify-content: center;
-`;
-
-const LogoImg = styled.img`
-  width: auto;
-  height: 95px;
-  padding: 10px;
-
-  @media (max-width: 990px) {
-    height: 90px;
-  }
-
-  @media (max-width: 740px) {
-    height: 85px;
-  }
-
-  @media (max-width: 640px) {
-    height: 80px;
-  }
-`;
-
-const MenuLi = styled.li`
-  ${LiCss}
-`;
-const MenuNav = styled.li`
-  ${LiCss}
-  align-self: center;
-`;
 
 const Nav = () => {
   return (
-    <Navigation>
-      <Ul>
-        <MenuNav>
+    <nav className="menu">
+      <ul className="menu">
+        <li className="logo menu">
           <MenuButton
             href="/"
-            name={<LogoImg src={logo} alt="logo" />}
-            isLogo="true"
+            class="logo"
+            name={<img className="logo" src={logo} alt="logo" />}
           />
-        </MenuNav>
-        {MenuButtonNames.map((element, index) => (
-          <MenuLi key={index}>
-            <MenuButton href={element.href} key={index} name={element.name} />
-          </MenuLi>
+        </li>
+        {MenuButtonNames.map((element, id) => (
+          <li className="menu" key={id}>
+            <MenuButton
+              href={element.href}
+              className="nav"
+              name={element.name}
+              key={id}
+            />
+          </li>
         ))}
         <Hamburger />
-      </Ul>
-    </Navigation>
+      </ul>
+    </nav>
   );
 };
 

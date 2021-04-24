@@ -19,6 +19,8 @@ section.textMain {
 
 div.mainColumn {
   flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 p.mainColumn {
@@ -146,5 +148,11 @@ ul.mainSection {
   }
   li.main {
     flex-basis: 100%;
+  }
+  .main-image {
+    object-position: right;
+  }
+  div.main {
+    margin: 0;
   }
 }
