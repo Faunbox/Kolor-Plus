@@ -3,11 +3,11 @@ import "../Styles/MainOffert.css";
 import { faCheck as znaczek } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const LiMainCont = ({ name }) => {
+const LiMainCont = (props) => {
   return (
     <li className="MainOffert">
       <FontAwesomeIcon icon={znaczek} />
-      {name}
+      {props.name}
     </li>
   );
 };

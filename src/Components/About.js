@@ -1,31 +1,15 @@
 import React, { Component } from "react";
 import "../Styles/About.css";
 import "../App.css";
+import { pageTransition, pageVariants } from "../Global/GlobalVariables";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 import ActiveCategory from "./ActiveCategory";
 import Aso1 from "../images/środek1.webp";
 import Aso2 from "../images/srodek3.webp";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 
 const images = [Aso1, Aso2];
-
-const pageVariants = {
-  in: {
-    opacity: 1,
-    scale: 1
-  },
-  out: {
-    opacity:0,
-    scale:0.8,
-  }
-}
-
-const pageTransition = {
-  type:"tween",
-  ease:"anticipate",
-  duration: 0.7,
-}
 
 class About extends Component {
   constructor(props) {
@@ -33,23 +17,22 @@ class About extends Component {
     this.state = {
       photoIndex: 0,
       isOpen: false,
-          };
+    };
   }
-
-
 
   render() {
     const { photoIndex, isOpen } = this.state;
     return (
       <>
-        <ActiveCategory text="O nas" class="acWrapper wrapper" />
+        <ActiveCategory text="O nas" className="acWrapper wrapper" />
         <motion.div
-         className="aboutWrapper wrapper" 
-         initial="out"
-         animate="in"
-         exit="out"
-         variants={pageVariants}
-         transition={pageTransition}>
+          className="aboutWrapper wrapper"
+          initial="out"
+          animate="in"
+          exit="out"
+          variants={pageVariants}
+          transition={pageTransition}
+        >
           <div className="about">
             <p className="about">
               Firma Kolor-Plus powstała w 1992r. i od tamtego czasu oferuje

@@ -11,8 +11,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
-  border: 2px black solid;
+  /* height: auto; */
 `;
 
 const ImageWrapper = styled.div`
@@ -25,8 +24,8 @@ const ImageElement = styled.img`
   width: 100%;
   height: 450px;
   object-fit: cover;
-  object-position: ${({ key }) =>
-    (key === 2 && "right") || (key === 3 && "left")};
+  object-position: ${({ index }) =>
+    (index === 2 && "91%") || (index === 3 && "23%")};
 `;
 
 const TextWrapper = styled.div`
@@ -138,7 +137,12 @@ const Slider = () => {
           return (
             <ImageWrapper opacity={imageProp} key={index}>
               {index === current && (
-                <ImageElement src={data} alt={h1Text[index]} key={index} />
+                <ImageElement
+                  src={data}
+                  index={index}
+                  alt={h1Text[index]}
+                  key={index}
+                />
               )}
             </ImageWrapper>
           );

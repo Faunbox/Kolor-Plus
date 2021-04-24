@@ -4,11 +4,10 @@ import GalleryImages from "./GalleryImages";
 import GalleryImages2 from "./GalleryImages2";
 import "../App.css";
 
-
 const Gallery = () => {
   return (
     <>
-      <ActiveCategory text="Galeria" class="acWrapper wrapper"/>
+      <ActiveCategory text="Galeria" className="acWrapper wrapper" />
       <GalleryImages text="Zdjęcia naszego sklepu oraz asortymentu" />
       <GalleryImages2 text="Certyfikaty i szkolenia" />
     </>

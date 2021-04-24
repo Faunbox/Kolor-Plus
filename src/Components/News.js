@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import firebase from "firebase/app";
 import "firebase/firestore";
-import { authAnony } from "./firebase";
 
 const News = () => {
   const [data, setData] = useState({});
   const [date, setDate] = useState("");
 
   useEffect(() => {
-    authAnony();
     const fetchData = async () => {
       const db = firebase.firestore();
       const docRef = await db
@@ -36,7 +34,8 @@ const News = () => {
           />
           <p
             className="news textMain"
-            dangerouslySetInnerHTML={{ __html: data.testtext }}></p>
+            dangerouslySetInnerHTML={{ __html: data.testtext }}
+          ></p>
         </article>
       </div>
     </>

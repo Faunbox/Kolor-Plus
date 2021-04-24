@@ -9,24 +9,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../App.css";
 import { motion } from "framer-motion";
+import { pageTransition, pageVariants } from "../Global/GlobalVariables";
 import gsap from "gsap";
-
-const pageVariants = {
-  in: {
-    opacity: 1,
-    scale: 1,
-  },
-  out: {
-    opacity: 0,
-    scale: 0.8,
-  },
-};
-
-const pageTransition = {
-  type: "tween",
-  ease: "anticipate",
-  duration: 0.7,
-};
 
 const Contacts = () => {
   const mapRef = useRef(null);
@@ -45,20 +29,22 @@ const Contacts = () => {
   });
   return (
     <>
-      <ActiveCategory text="Kontakt" class="acWrapper wrapper" />
+      <ActiveCategory text="Kontakt" className="acWrapper wrapper" />
       <motion.div
         className="contactWrapper wrapper"
         initial="out"
         animate="in"
         exit="out"
         variants={pageVariants}
-        transition={pageTransition}>
+        transition={pageTransition}
+      >
         <div className="contactTab">
           <div className="contactAdress">
             <FontAwesomeIcon icon={localization} />
             <a
               className="contact"
-              href="https://www.google.com/maps/place/Kolor-Plus+s.c.+Glajc-Chowaniec+Beata,+Chowaniec+Marian/@49.682271,19.2092888,15z/data=!4m2!3m1!1s0x0:0x6b416dd2a3e1abb7?sa=X&ved=2ahUKEwjK4cjLmsDrAhWwl4sKHVpfBY8Q_BIwCnoECBcQCA">
+              href="https://www.google.com/maps/place/Kolor-Plus+s.c.+Glajc-Chowaniec+Beata,+Chowaniec+Marian/@49.682271,19.2092888,15z/data=!4m2!3m1!1s0x0:0x6b416dd2a3e1abb7?sa=X&ved=2ahUKEwjK4cjLmsDrAhWwl4sKHVpfBY8Q_BIwCnoECBcQCA"
+            >
               Aleja Marszałka Józefa Piłsudskiego 80, 34-300 Żywiec
             </a>
           </div>
@@ -84,7 +70,8 @@ const Contacts = () => {
             frameBorder="0"
             satelite="true"
             title="map"
-            allow="fullscreen"></iframe>
+            allow="fullscreen"
+          ></iframe>
         </div>
       </motion.div>
     </>

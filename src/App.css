@@ -25,11 +25,6 @@
   margin: 0 auto;
 }
 
-body {
-  overflow-x: hidden;
-  background-color: var(--bgc);
-}
-
 .wrapper {
   max-width: 1300px;
   margin: 0 auto;
