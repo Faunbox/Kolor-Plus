@@ -5,22 +5,7 @@ import { motion } from "framer-motion";
 import frontImg from "../images/front.webp";
 import News from "./News.js";
 
-const pageVariants = {
-  in: {
-    opacity: 1,
-    scale: 1,
-  },
-  out: {
-    opacity: 0,
-    scale: 0.8,
-  },
-};
-
-const pageTransition = {
-  type: "tween",
-  ease: "anticipate",
-  duration: 1.3,
-};
+import { pageTransition, pageVariants } from "../Global/GlobalVariables";
 
 const products = [
   "– lakiery",
@@ -54,12 +39,15 @@ const MainSection = () => {
       >
         <div id="news" className="mainColumn">
           <section className="textMain">
-            <img className="main-image" src={frontImg} alt="Kolor-Plus sklep" />
+            <img
+              className="main-image"
+              src={frontImg}
+              loading="auto"
+              alt="Kolor-Plus sklep"
+            />
             <div className="main">
               <p className="textMain news">
-                <strong>
-                  W naszym sklepie możecie państwo kupić między innymi:
-                </strong>
+                <strong>W naszej ofercie znajdziecie Państwo:</strong>
               </p>
               <ul className="main">
                 {products.map((product, i) => (
@@ -71,10 +59,9 @@ const MainSection = () => {
             </div>
           </section>
           <p className="mainColumn">
-            Jako firma z wieloletnim doświadczeniem, profesjonalna obsługa
-            naszych klientów jest dla nas priorytetem. Zapewniamy
-            najdokładniejszy dobór koloru, fachową poradę i co najważniejsze -{" "}
-            <strong>100% satysfakcji.</strong>
+            <strong>Misja:</strong>
+            <br />
+            Doskonały kolor i doskonała obsługa
           </p>
         </div>
         <div className="line"></div>

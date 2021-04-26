@@ -3,7 +3,6 @@ import ActiveCategory from "./ActiveCategory";
 import "../Styles/Contacts.css";
 import {
   faMapMarkedAlt as localization,
-  faEnvelope as mail,
   faPhoneAlt as phone,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -41,24 +40,21 @@ const Contacts = () => {
         <div className="contactTab">
           <div className="contactAdress">
             <FontAwesomeIcon icon={localization} />
-            <a
-              className="contact"
-              href="https://www.google.com/maps/place/Kolor-Plus+s.c.+Glajc-Chowaniec+Beata,+Chowaniec+Marian/@49.682271,19.2092888,15z/data=!4m2!3m1!1s0x0:0x6b416dd2a3e1abb7?sa=X&ved=2ahUKEwjK4cjLmsDrAhWwl4sKHVpfBY8Q_BIwCnoECBcQCA"
-            >
-              Aleja Marszałka Józefa Piłsudskiego 80, 34-300 Żywiec
-            </a>
+            <span className="hours">Godziny otwarcia:</span>
+            <br /> Poniedziałek - 08:00–16:00
+            <br /> Wtorek - 08:00–16:00
+            <br /> Środa - 08:00–16:00
+            <br />
+            Czwartek - 08:00–16:00
+            <br />
+            Piątek - 08:00–16:00
+            <br />
+            Sobota - 09:00 - 13:00
           </div>
           <div className="contactTelephone">
             <FontAwesomeIcon icon={phone} />
-
-            <a className="contact" href="tel:602-271-079">
-              602-271-079
-            </a>
-          </div>
-          <div className="contactEmail">
-            <FontAwesomeIcon icon={mail} />
-            <a className="contact" href="mailto:biuro@kolorplus.com.pl">
-              biuro@kolorplus.com.pl
+            <a className="contact" href="tel:+48 602783912">
+              +48 602 783 912
             </a>
           </div>
         </div>

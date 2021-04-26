@@ -13,7 +13,12 @@ a.contact {
 
 .contactWrapper div {
   color: var(--font-color);
-  font-size: 30px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.contactWrapper div:nth-last-child(1) {
+  margin-top: 10px;
 }
 
 .contactWrapper svg {
@@ -34,7 +39,7 @@ div.map {
 
 @media (max-width: 1340px) {
   .contactWrapper div {
-    font-size: 25px;
+    font-size: 22px;
   }
   div.contactTab {
     flex-basis: 80%;
@@ -64,18 +69,18 @@ div.map {
   }
   .contactWrapper div {
     flex-basis: 80%;
-    font-size: 22px;
+    font-size: 19px;
   }
 }
 
 @media (max-width: 590px) {
   .contactWrapper div {
-    font-size: 20px;
+    font-size: 17px;
   }
 }
 
 @media (max-width: 375px) {
   .contactWrapper div {
-    font-size: 19px;
+    font-size: 16px;
   }
 }

@@ -34,7 +34,7 @@ const News = () => {
           />
           <p
             className="news textMain"
-            dangerouslySetInnerHTML={{ __html: data.testtext }}
+            dangerouslySetInnerHTML={{ __html: data.newsText }}
           ></p>
         </article>
       </div>

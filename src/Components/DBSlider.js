@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: auto; */
+  border-top: 1px solid black;
 `;
 
 const ImageWrapper = styled.div`
@@ -83,18 +83,11 @@ const arrowCss = css`
   &:hover {
     transform: translate(0, -50%) scale(1.3);
   }
-  /* 
-  @media (max-width: 420px) {
-    transform: translateY(-400%);
-  } */
 `;
 
 const LeftArrow = styled(IoIosArrowBack)`
   ${arrowCss}
   left: 2%;
-  /* @media (max-width: 420px) {
-    transform: translate(600%, -400%);
-  } */
 `;
 
 const RightArrow = styled(IoIosArrowForward)`
@@ -112,7 +105,7 @@ const Slider = () => {
     "kosmetyki samochodowe",
     "Emalie przemysłowe",
     "poliuretanowa powłoka ochronna",
-    "lakiery samochodowe i zaopatrzenie lakierni",
+    "lakiery samochodowe i materiały lakiernicze",
   ];
 
   const lenght = imagesData.length - 1;

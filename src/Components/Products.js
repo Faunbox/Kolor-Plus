@@ -6,22 +6,7 @@ import "../Styles/Products.css";
 import "../App.css";
 import { motion } from "framer-motion";
 
-const pageVariants = {
-  in: {
-    opacity: 1,
-    scale: 1,
-  },
-  out: {
-    opacity: 0,
-    scale: 0.8,
-  },
-};
-
-const pageTransition = {
-  type: "tween",
-  ease: "anticipate",
-  duration: 0.7,
-};
+import { pageTransition, pageVariants } from "../Global/GlobalVariables";
 
 const Products = () => {
   return (

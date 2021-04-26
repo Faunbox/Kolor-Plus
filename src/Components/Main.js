@@ -1,7 +1,8 @@
-import React from "react";
-import Slider from "./DBSlider";
+import React, { lazy } from "react";
 import MainSection from "./MainSection";
 import "../App.css";
+
+const Slider = lazy(() => import("./DBSlider"));
 
 const Main = () => {
   return (

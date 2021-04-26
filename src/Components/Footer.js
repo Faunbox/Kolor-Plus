@@ -18,7 +18,10 @@ const Footer = () => {
           <div className="FAdres">
             <h1 className="FAdres">Adres</h1>
             <section className="FAdres">
-              <a className="FAdres" href="https://www.google.com/maps/place/Kolor-Plus+s.c.+Glajc-Chowaniec+Beata,+Chowaniec+Marian/@49.682271,19.2092888,15z/data=!4m2!3m1!1s0x0:0x6b416dd2a3e1abb7?sa=X&ved=2ahUKEwjK4cjLmsDrAhWwl4sKHVpfBY8Q_BIwCnoECBcQCA">
+              <a
+                className="FAdres"
+                href="https://www.google.com/maps/place/Kolor-Plus+s.c.+Glajc-Chowaniec+Beata,+Chowaniec+Marian/@49.682271,19.2092888,15z/data=!4m2!3m1!1s0x0:0x6b416dd2a3e1abb7?sa=X&ved=2ahUKEwjK4cjLmsDrAhWwl4sKHVpfBY8Q_BIwCnoECBcQCA"
+              >
                 <FontAwesomeIcon icon={localization} />
                 Aleja Marszałka Józefa Piłsudskiego 80, 34-300 Żywiec
               </a>
@@ -57,19 +60,16 @@ const Footer = () => {
             <h1 className="FTelephone">Telefon</h1>
             <p className="FTelephone">
               <FontAwesomeIcon icon={phone} />
-              Telefon Marcin: <a href="tel:+48 693 699 079">+48 693 699 079</a>
+              Telefon sklep: <a href="tel:33 8618084 ">33 861 80 84</a>
             </p>
             <p className="FTelephone">
               <FontAwesomeIcon icon={phone} />
-              Telefon Bossu: <a href="tel:+48 693 699 079">+48 693 699 079</a>
+              Telefon właściciel:{" "}
+              <a href="tel:+48 602783912">+48 602 783 912</a>
             </p>
           </div>
           <div className="FEmail">
             <h1 className="FEmail">Napisz do nas!</h1>
-            <p className="FEmail">
-              <FontAwesomeIcon icon={mail} />
-              <a href="mailto:faunbox2@gmail.com">biuro@kolorplus.com.pl</a>
-            </p>
             <p className="FEmail">
               <FontAwesomeIcon icon={mail} />
               <a href="mailto:marian@kolorplus.com.pl">
