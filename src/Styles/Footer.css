@@ -87,11 +87,12 @@ p.FEmail svg {
   p.FEmail svg {
     font-size: 14px;
   }
+
   footer h1 {
     font-size: 18px;
   }
   div.footerWrapper div {
-    flex-basis: 20%;
+    flex-basis: 45%;
   }
 }
 

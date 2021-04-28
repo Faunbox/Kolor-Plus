@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
 const News = () => {
   const [data, setData] = useState({});
   const [date, setDate] = useState("");
+  const newsRef = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,11 +20,11 @@ const News = () => {
       setDate(data.dataDodania.slice(0, 10));
     };
     fetchData();
-  }, []);
+  }, [newsRef]);
 
   return (
     <>
-      <div id="news">
+      <div ref={newsRef} id="news">
         <h1 className="news">Aktualności</h1>
         <p className="news-date">{date}</p>
         <article className="news">

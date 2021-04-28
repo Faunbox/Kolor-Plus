@@ -6,7 +6,7 @@ import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 import ActiveCategory from "./ActiveCategory";
 import Aso1 from "../images/cromax puszki.webp";
-import Aso2 from "../images/środek1.webp";
+import Aso2 from "../images/sklep 1 (1).webp";
 import { motion } from "framer-motion";
 
 const images = [Aso1, Aso2];
@@ -50,6 +50,11 @@ class About extends Component {
               className="aboutImages"
             />
           </div>
+          <p className="mainColumn">
+            <strong>Misja:</strong>
+            <br />
+            Doskonały kolor i doskonała obsługa
+          </p>
           <div className="about">
             <p className="about">
               Stale się rozwijamy i wprowadzamy do naszej oferty najnowsze

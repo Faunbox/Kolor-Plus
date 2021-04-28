@@ -6,7 +6,7 @@ div.aboutWrapper {
   align-self: center;
   color: var(--font-color);
   font-size: var(--article-fz);
-  margin: 10px 10px 15px 10px;
+  margin: 10px 10px 25px 10px;
   color: var(--footer-p-color);
 }
 

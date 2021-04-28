@@ -60,13 +60,14 @@ const Contacts = () => {
         </div>
         <div className="map" ref={mapRef}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d645.3787768580913!2d19.208741629208!3d49.68227186644041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4714289c9f123d01%3A0x6b416dd2a3e1abb7!2sKolor-Plus%20s.c.%20Glajc-Chowaniec%20Beata%2C%20Chowaniec%20Marian!5e0!3m2!1spl!2spl!4v1596474761100!5m2!1spl!2spl"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10326.060613743473!2d19.2092888!3d49.682271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6b416dd2a3e1abb7!2sKolor-Plus%20s.c.%20Glajc-Chowaniec%20Beata%2C%20Chowaniec%20Marian!5e0!3m2!1spl!2spl!4v1619607844571!5m2!1spl!2spl"
             width="700"
             height="400"
-            frameBorder="0"
+            style={{ border: 0 }}
             satelite="true"
             title="map"
-            allow="fullscreen"
+            allowFullScreen=""
+            loading="lazy"
           ></iframe>
         </div>
       </motion.div>

@@ -30,13 +30,11 @@ import pngImage14 from "../images/logos/k2.png";
 import mipa from "../images/logos/mipa.webp";
 import menzerna from "../images/logos/menzerna-logo.webp";
 import abw from "../images/logos/abw logp.webp";
-import cromax from "../images/logos/cromax logo.webp";
 
 const BrandImages = () => {
   let imagesPng = [
     abw,
     pngImage2,
-    cromax,
     pngImage6,
     pngImage7,
     mipa,

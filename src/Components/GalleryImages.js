@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import Image1 from "../images/front.webp";
 import Image2 from "../images/przód.webp";
 import Image3 from "../images/srodek2.webp";
-import Image4 from "../images/środek1.webp";
-import Image5 from "../images/srodek4.webp";
+import Image4 from "../images/sklep 2 (1).webp";
+import Image5 from "../images/sklep 1 (1).webp";
 import Image6 from "../images/spraye.webp";
 import Image7 from "../images/srodek3.webp";
 

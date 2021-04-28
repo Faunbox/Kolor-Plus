@@ -58,11 +58,6 @@ const MainSection = () => {
               </ul>
             </div>
           </section>
-          <p className="mainColumn">
-            <strong>Misja:</strong>
-            <br />
-            Doskonały kolor i doskonała obsługa
-          </p>
         </div>
         <div className="line"></div>
         <News />

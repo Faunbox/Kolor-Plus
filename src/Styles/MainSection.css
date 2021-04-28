@@ -26,7 +26,7 @@ div.mainColumn {
 p.mainColumn {
   text-align: center;
   flex-basis: 100%;
-  margin: 20px auto 0 auto;
+  margin: 20px auto;
 }
 
 div.main {
@@ -104,7 +104,7 @@ ul.mainSection {
     flex-basis: 50%;
   }
   p.textMain {
-    margin: 0 0 0 0;
+    margin: 0;
   }
 }
 
