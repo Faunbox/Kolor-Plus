@@ -26,7 +26,7 @@ p.about:nth-of-type(2) {
 }
 
 img.aboutImages {
-  width: 100%;
+  /* width: 100%;   */
   align-self: center;
   max-height: 340px;
   max-width: 370px;
@@ -53,6 +53,7 @@ img.aboutImages {
   img.aboutImages {
     margin-left: 2%;
     margin-right: 2%;
+    width: 100%;
   }
 }
 

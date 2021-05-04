@@ -39,6 +39,10 @@ const Color = () => {
             <br />- lub przyjazdu samochodem
           </p>
         </div>
+        <p className="color bold">
+          Sprawdzamy każdy lakier poprzez natrysk próbny i poprawiamy go, aż do
+          uzyskania odpowiedniego odcienia.
+        </p>
         <div className="color">
           <img className="color" alt="ChromaWeb Cromax" src={images[0]} />
           <p className="color first">
@@ -82,10 +86,7 @@ const Color = () => {
               • odległość pistoletu od elementu oraz wiele innych.
             </li>
           </ul>
-          <p className="color last">
-            Sprawdzamy każdy lakier poprzez natrysk próbny i poprawiamy go, aż
-            do uzyskania odpowiedniego odcienia.
-          </p>
+
           <img
             className="color last"
             alt="sprawdzanie lakieru"

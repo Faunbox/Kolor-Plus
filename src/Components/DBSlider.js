@@ -12,16 +12,19 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   border-top: 1px solid black;
+  border-bottom: 1px solid black;
 `;
 
 const ImageWrapper = styled.div`
   opacity: ${(prop) => prop.opacity};
   transition: 1s ease;
   text-align: center;
+  height: 450px;
 `;
 
 const ImageElement = styled.img`
-  width: 100%;
+  width: auto;
+  width: 100vw;
   height: 450px;
   object-fit: cover;
   object-position: ${({ index }) =>

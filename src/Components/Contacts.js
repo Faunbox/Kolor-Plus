@@ -53,8 +53,8 @@ const Contacts = () => {
           </div>
           <div className="contactTelephone">
             <FontAwesomeIcon icon={phone} />
-            <a className="contact" href="tel:+48 602783912">
-              +48 602 783 912
+            <a className="contact" href="tel:33 8618084 ">
+              33 861 80 84
             </a>
           </div>
         </div>

@@ -50,11 +50,7 @@ class About extends Component {
               className="aboutImages"
             />
           </div>
-          <p className="mainColumn">
-            <strong>Misja:</strong>
-            <br />
-            Doskonały kolor i doskonała obsługa
-          </p>
+
           <div className="about">
             <p className="about">
               Stale się rozwijamy i wprowadzamy do naszej oferty najnowsze
@@ -73,6 +69,11 @@ class About extends Component {
               className="aboutImages"
             />
           </div>
+          <p className="mainColumn">
+            <strong>Misja:</strong>
+            <br />
+            Doskonały kolor i doskonała obsługa
+          </p>
         </motion.div>
 
         {isOpen && (
