@@ -2,9 +2,13 @@ import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import img1 from "../images/slider1.webp";
-import img2 from "../images/slider2.webp";
-import img3 from "../images/slider3.webp";
-import img4 from "../images/slider4.webp";
+import img2 from "../images/industry.webp";
+import img3 from "../images/cobra 2.webp";
+import img4 from "../images/lakiernia.webp";
+import img1Min from "../images/slider1.min.webp";
+import img2Min from "../images/industry.min.webp";
+import img3Min from "../images/cobra 2.min.webp";
+import img4Min from "../images/lakiernia.min.webp";
 
 const Wrapper = styled.div`
   position: relative;
@@ -100,9 +104,10 @@ const RightArrow = styled(IoIosArrowForward)`
 
 const Slider = () => {
   const [current, setCurrent] = useState(0);
-  const time = 5000;
+  const time = 50000;
 
   const imagesData = [img1, img2, img3, img4];
+  const imagesDataMin = [img1Min, img2Min, img3Min, img4Min]
 
   const h1Text = [
     "kosmetyki samochodowe",
@@ -133,12 +138,18 @@ const Slider = () => {
           return (
             <ImageWrapper opacity={imageProp} key={index}>
               {index === current && (
+                
+                <picture>
+                  <source media="(max-width: 800px)" srcSet={imagesDataMin[index]}/>
+                  <source media="(min-width: 801px)" srcSet={data}/>
                 <ImageElement
                   src={data}
                   index={index}
                   alt={h1Text[index]}
-                  key={index}
-                />
+                  key={data}
+                  />
+                  </picture>
+            
               )}
             </ImageWrapper>
           );
