@@ -141,7 +141,6 @@ const Slider = () => {
                 
                 <picture>
                   <source media="(max-width: 800px)" srcSet={imagesDataMin[index]}/>
-                  <source media="(min-width: 801px)" srcSet={data}/>
                 <ImageElement
                   src={data}
                   index={index}

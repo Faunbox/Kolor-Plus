@@ -3,6 +3,7 @@ import "../Styles/MainSection.css";
 import "../App.css";
 import { motion } from "framer-motion";
 import frontImg from "../images/front.webp";
+import frontImgMin from "../images/front.min.webp";
 import News from "./News.js";
 
 import { pageTransition, pageVariants } from "../Global/GlobalVariables";
@@ -39,12 +40,15 @@ const MainSection = () => {
       >
         <div id="news" className="mainColumn">
           <section className="textMain">
+            <picture>
+            <source media="(max-width: 800px)" srcSet={frontImgMin}/>
             <img
               className="main-image"
               src={frontImg}
               loading="auto"
-              alt="Kolor-Plus sklep"
+              alt="Kolor Plus sklep"
             />
+            </picture>
             <div className="main">
               <p className="textMain news">
                 <strong>W naszej ofercie znajdziecie Państwo:</strong>

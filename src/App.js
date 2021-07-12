@@ -1,14 +1,10 @@
 import React, { Suspense, lazy, useEffect } from "react";
 import "./App.css";
 // eslint-disable-next-line
-import firebase from "./Components/firebase";
-import "firebase/analytics";
-import "firebase/storage";
-import "firebase/firestore";
-import "firebase/auth";
+import firebaseApp from "./Components/firebase";
 import { authAnony } from "../src/Components/firebase";
 import Header from "./Components/Header";
-import Main from "./Components/Main";
+// import Main from "./Components/Main";
 import Footer from "./Components/Footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
@@ -16,6 +12,7 @@ import CookieConsent from "react-cookie-consent";
 import { pageTransition, pageVariants } from "./Global/GlobalVariables";
 
 const GalleryComponent = lazy(() => import("./Components/Gallery"));
+const Main = lazy(() => import("./Components/Main"));
 const ColorComponent = lazy(() => import("./Components/Color"));
 const ContactsComponent = lazy(() => import("./Components/Contacts"));
 const ProductsComponent = lazy(() => import("./Components/Products"));
