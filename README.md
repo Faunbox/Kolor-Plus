@@ -5,7 +5,7 @@ My first website created for my friend who have car paint shop. As database I us
 ## Technologies used for this project
 Project is created with:
 * `React`
-* * `React-Router-DOM`
+*  `React-Router-DOM`
 * `Firebase`
 * `Gsap`
 
