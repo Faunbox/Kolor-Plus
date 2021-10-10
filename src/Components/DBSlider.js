@@ -48,7 +48,7 @@ const TextWrapper = styled.div`
   text-shadow: 3px 2px 2px black;
 `;
 
-const TextElement = styled.h1`
+const TextElement = styled.h2`
   width: 100%;
   height: auto;
   text-shadow: black 4px 4px 4px;

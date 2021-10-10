@@ -6,6 +6,7 @@ import Chroma2 from "../images/Chroma2.png";
 import Chroma3 from "../images/Chroma3.png";
 import Chroma4 from "../images/natrysk.webp";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { pageTransition, pageVariants } from "../Global/GlobalVariables";
 
 const Color = () => {
@@ -13,6 +14,17 @@ const Color = () => {
 
   return (
     <>
+    <Helmet>
+    <meta
+          name="keywords"
+          content="lakiery żywiec, lakiery samochodowe żywiec, lakiery samochodowe zywiec, lakiery zywiec, novol, cromax, spectral, 3M, lakiery samochodowe żywiec, autolakiery, autolakiery żywiec, rozcieńczalniki, materiały polerskie, lakiery akrylowe, podkłady epoksydowe, szpachlówki, auto detailing, utwardzacze, emalie przemysłowe, dobór lakieru, dobor lakieru, masy uszczelniające, wyposażenie lakierni, dodatki, materiały pomocnicze, nitro, rozpuszczalniki, kleje, kosmetyka samochodowa, zaopatrzenie lakierni"
+        />
+    <meta
+          name="description"
+          content="Nasza firma zajmuje się sprzedażą lakierów samochodowych. Konserwacje, wyposażenie lakierni, spraye, farby, akcesoria lakiernicze."
+        />
+      <title>Kolor Plus - Kolor</title>
+    </Helmet>
       <ActiveCategory text="Kolory" className="acWrapper wrapper" />
       <motion.div
         className="colorWrapper wrapper"

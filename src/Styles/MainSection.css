@@ -89,6 +89,10 @@ h1.news {
   align-self: flex-start;
 }
 
+h2.list {
+  font-size: 1rem;
+}
+
 ul.mainSection {
   list-style: none;
 }

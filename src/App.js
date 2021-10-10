@@ -4,6 +4,8 @@ import "./App.css";
 import firebaseApp from "./Components/firebase";
 import { authAnony } from "../src/Components/firebase";
 import Header from "./Components/Header";
+import { HelmetProvider } from "react-helmet-async";
+
 // import Main from "./Components/Main";
 import Footer from "./Components/Footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -29,45 +31,47 @@ function App() {
   });
   return (
     <BrowserRouter>
-      <>
-        <CookieConsent
-          location="bottom"
-          cookieName="ciasteczka"
-          expires={365}
-          overlay
-          buttonText="Rozumiem, przejdz dalej"
-          flipButtons="true"
-          contentStyle={myContentStyle}
-        >
-          Ta strona używa plików cookie, aby uzyskać szczegółowe informacje na
-          temat przetwarzania Twoich danych osobowych, znajdują się one w{" "}
-          <a className="cookie" href="/privacy">
-            polityce prywatności
-          </a>
-          .
-        </CookieConsent>
-        <Header />
-        <Suspense fallback={<div className="loading">Wczytywanie...</div>}>
-          <AnimatePresence>
-            <Switch>
-              <Route path="/" exact component={Main} />
-              <Route
-                path="/about"
-                component={AboutComponent}
-                variants={pageVariants}
-                transition={pageTransition}
-              />
-              <Route path="/products" component={ProductsComponent} />
-              <Route path="/contacts" component={ContactsComponent} />
-              <Route path="/gallery" component={GalleryComponent} />
-              <Route path="/color" component={ColorComponent} />
-              <Route path="/privacy" component={CookieComponent} />
-              <Route component={Main} />
-            </Switch>
-          </AnimatePresence>
-        </Suspense>
-        <Footer />
-      </>
+      <HelmetProvider>
+        <>
+          <CookieConsent
+            location="bottom"
+            cookieName="ciasteczka"
+            expires={365}
+            overlay
+            buttonText="Rozumiem, przejdz dalej"
+            flipButtons="true"
+            contentStyle={myContentStyle}
+          >
+            Ta strona używa plików cookie, aby uzyskać szczegółowe informacje na
+            temat przetwarzania Twoich danych osobowych, znajdują się one w{" "}
+            <a className="cookie" href="/privacy">
+              polityce prywatności
+            </a>
+            .
+          </CookieConsent>
+          <Header />
+          <Suspense fallback={<div className="loading">Wczytywanie...</div>}>
+            <AnimatePresence>
+              <Switch>
+                <Route path="/" exact component={Main} />
+                <Route
+                  path="/onas"
+                  component={AboutComponent}
+                  variants={pageVariants}
+                  transition={pageTransition}
+                />
+                <Route path="/produkty" component={ProductsComponent} />
+                <Route path="/kontakt" component={ContactsComponent} />
+                <Route path="/galeria" component={GalleryComponent} />
+                <Route path="/kolor" component={ColorComponent} />
+                <Route path="/prywatność" component={CookieComponent} />
+                <Route component={Main} />
+              </Switch>
+            </AnimatePresence>
+          </Suspense>
+          <Footer />
+        </>
+      </HelmetProvider>
     </BrowserRouter>
   );
 }

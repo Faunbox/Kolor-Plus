@@ -16,11 +16,11 @@ const pageTransition = {
 };
 
 const MenuButtonNames = [
-  { name: "O nas", href: "/about" },
-  { name: "Produkty", href: "/products" },
-  { name: "Kolory", href: "/color" },
-  { name: "Galeria", href: "/gallery" },
-  { name: "Kontakt", href: "/contacts" },
+  { name: "O nas", href: "/onas" },
+  { name: "Produkty", href: "/produkty" },
+  { name: "Kolory", href: "/kolor" },
+  { name: "Galeria", href: "/galeria" },
+  { name: "Kontakt", href: "/kontakt" },
 ];
 
 export { pageTransition, pageVariants, MenuButtonNames };

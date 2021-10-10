@@ -3,6 +3,8 @@ import "../Styles/About.css";
 import "../App.css";
 import { pageTransition, pageVariants } from "../Global/GlobalVariables";
 import Lightbox from "react-image-lightbox";
+import { Helmet } from "react-helmet-async";
+
 import "react-image-lightbox/style.css";
 import ActiveCategory from "./ActiveCategory";
 import Aso1 from "../images/cromax puszki.webp";
@@ -24,6 +26,17 @@ class About extends Component {
     const { photoIndex, isOpen } = this.state;
     return (
       <>
+        <Helmet>
+          <meta
+            name="keywords"
+            content="lakiery żywiec, lakiery samochodowe żywiec, lakiery samochodowe zywiec, lakiery zywiec, novol, cromax, spectral, 3M, lakiery samochodowe żywiec, autolakiery, autolakiery żywiec, rozcieńczalniki, materiały polerskie, lakiery akrylowe, podkłady epoksydowe, szpachlówki, auto detailing, utwardzacze, emalie przemysłowe, dobór lakieru, dobor lakieru, masy uszczelniające, wyposażenie lakierni, dodatki, materiały pomocnicze, nitro, rozpuszczalniki, kleje, kosmetyka samochodowa, zaopatrzenie lakierni"
+          />
+          <meta
+            name="description"
+            content="Firma Kolor-Plus powstała w 1992r. Jesteśmy autoryzowanym dystrybutorem marki Cromax (dawniej Dupont). "
+          />
+          <title>Kolor Plus - O Nas</title>
+        </Helmet>
         <ActiveCategory text="O nas" className="acWrapper wrapper" />
         <motion.div
           className="aboutWrapper wrapper"

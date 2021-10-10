@@ -10,6 +10,7 @@ import "../App.css";
 import { motion } from "framer-motion";
 import { pageTransition, pageVariants } from "../Global/GlobalVariables";
 import gsap from "gsap";
+import { Helmet } from "react-helmet-async";
 
 const Contacts = () => {
   const mapRef = useRef(null);
@@ -28,6 +29,17 @@ const Contacts = () => {
   });
   return (
     <>
+      <Helmet>
+        <meta
+          name="keywords"
+          content="lakiery żywiec, lakiery samochodowe żywiec, lakiery samochodowe zywiec, lakiery zywiec, novol, cromax, spectral, 3M, lakiery samochodowe żywiec, autolakiery, autolakiery żywiec, rozcieńczalniki, materiały polerskie, lakiery akrylowe, podkłady epoksydowe, szpachlówki, auto detailing, utwardzacze, emalie przemysłowe, zaopatrzenie hurt / detal, masy uszczelniające, wyposażenie lakierni, dodatki, materiały pomocnicze, nitro, rozpuszczalniki, kleje, kosmetyka samochodowa, zaopatrzenie lakierni"
+        />
+        <meta
+          name="description"
+          content="Kontakt z firmą Kolor Plus - lakiery samochodowe"
+        />
+        <title>Kolor Plus - Kontakt</title>
+      </Helmet>
       <ActiveCategory text="Kontakt" className="acWrapper wrapper" />
       <motion.div
         className="contactWrapper wrapper"

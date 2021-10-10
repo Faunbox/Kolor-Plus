@@ -41,21 +41,21 @@ const MainSection = () => {
         <div id="news" className="mainColumn">
           <section className="textMain">
             <picture>
-            <source media="(max-width: 800px)" srcSet={frontImgMin}/>
-            <img
-              className="main-image"
-              src={frontImg}
-              loading="auto"
-              alt="Kolor Plus sklep"
-            />
+              <source media="(max-width: 800px)" srcSet={frontImgMin} />
+              <img
+                className="main-image"
+                src={frontImg}
+                loading="auto"
+                alt="Kolor Plus sklep"
+              />
             </picture>
             <div className="main">
               <p className="textMain news">
                 <strong>W naszej ofercie znajdziecie Państwo:</strong>
               </p>
               <ul className="main">
-                {products.map((product, i) => (
-                  <li className="main" key={i}>
+                {products.map((product) => (
+                  <li className="main" key={product}>
                     {product}
                   </li>
                 ))}
